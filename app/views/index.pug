@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  title Station m&eacute;t&eacute;orologique
+div.container
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.rounded.mt-5
+    a.navbar-brand(href='#') 
+      img(src='img/sun.png' alt='Sun' style=('display:inline-block;'))
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbartog')
+      span.navbar-toggler-icon
+    div.collapse.navbar-collapse(id='navbartog')
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a.nav-link(href='/v0.2.0/data/temperature') Température
+        li.nav-item
+          a.nav-link(href='/v0.2.0/data/humidity') Humidité
+        li.nav-item
+          a.nav-link(href='/v0.2.0/data/pressure') Pression
+        li.nav-item
+          a.nav-link(href='/v0.2.0/data/time') Date actuelle
+  main(role='main')
+    div.jumbotron.mt-3
+      h1.display-4(id='time') #{time}
+      hr.my-4
+      p(id='temperature') Temp&eacute;rature #{temperature} [&deg;C]
+      p(id='humidity') Humidit&eacute; #{humidity} [%]
+      p(id='pressure') Pression #{pressure} [hPa]
+      p.lead
+        a.btn.btn-primary(href="/v0.2.0/data") Accéder à l'ensemble de ces données en JSON
+        
+script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+script(src='/scripts/update.js')

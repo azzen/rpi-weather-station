@@ -1,0 +1,457 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/",
+    "title": "",
+    "version": "0.1.0",
+    "name": "Index",
+    "group": "MainController",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "HTML",
+            "optional": false,
+            "field": "Affichage",
+            "description": "<p>de la page contenant toutes les informations sur le capteur</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/controllers/main.controller.js",
+    "groupTitle": "MainController"
+  },
+  {
+    "type": "get",
+    "url": "/v0.2.0/data/",
+    "title": "Affiche toutes les données du capteur",
+    "version": "0.2.0",
+    "name": "findAll",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.2.0/data/",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "humidity",
+            "description": "<p>Humidité en %</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "pressure",
+            "description": "<p>Pression en hPa</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "temperature",
+            "description": "<p>Température en degré celsius</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "time",
+            "description": "<p>Date et heure actuelle</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.2.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.1.0/data/",
+    "title": "Affiche toutes les données du capteur",
+    "version": "0.1.0",
+    "name": "findAll",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.1.0/data/",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "humidity",
+            "description": "<p>Humidité en %</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "pressure",
+            "description": "<p>Pression en hPa</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "temperature",
+            "description": "<p>Température en degré celsius</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "time",
+            "description": "<p>Date et heure actuelle</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.1.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.2.0/data/humidity",
+    "title": "Récupère l'humidité",
+    "version": "0.2.0",
+    "name": "findHumidity",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.2.0/data/humidity",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "humidity",
+            "description": "<p>Humidité en %</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.2.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.1.0/data/humidity",
+    "title": "Récupère l'humidité",
+    "version": "0.1.0",
+    "name": "findHumidity",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.1.0/data/humidity",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "HTML",
+            "optional": false,
+            "field": "humidity",
+            "description": "<p>Affichage de l'humidité en %</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.1.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.2.0/data/pressure",
+    "title": "Récupère la pression",
+    "version": "0.2.0",
+    "name": "findPressure",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.2.0/data/pressure",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "pressure",
+            "description": "<p>Pression en hPa</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.2.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.1.0/data/pressure",
+    "title": "Récupère la pression",
+    "version": "0.1.0",
+    "name": "findPressure",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.1.0/data/pressure",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "HTML",
+            "optional": false,
+            "field": "pressure",
+            "description": "<p>Affichage de la pression en hPa</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.1.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.2.0/data/temperature",
+    "title": "Récupère la température",
+    "version": "0.2.0",
+    "name": "findTemperature",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.2.0/data/temperature",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "temperature",
+            "description": "<p>Température en degré celsius</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.2.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.1.0/data/temperature",
+    "title": "Récupère la température",
+    "version": "0.1.0",
+    "name": "findTemperature",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.1.0/data/temperature",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "HTML",
+            "optional": false,
+            "field": "temperature",
+            "description": "<p>Affichage de la température en degré celsius</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.1.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.2.0/data/pressure",
+    "title": "Récupère la date et l'heure actuelle",
+    "version": "0.2.0",
+    "name": "findTime",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.2.0/data/time",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "time",
+            "description": "<p>Date et heure actuelle</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.2.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "type": "get",
+    "url": "/v0.1.0/data/pressure",
+    "title": "Récupère la date et l'heure actuelle",
+    "version": "0.1.0",
+    "name": "findTime",
+    "group": "Sense_Hat",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Utilisation:",
+        "content": "curl http://157.26.227.115:3000/v0.1.0/data/time",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "HTML",
+            "optional": false,
+            "field": "time",
+            "description": "<p>Affichage de la date et de l'heure actuelle</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/v0.1.0/controllers/data.controller.js",
+    "groupTitle": "Sense_Hat"
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "app/static/docs/api/v1/main.js",
+    "group": "_home_pi_weather_station_app_static_docs_api_v1_main_js",
+    "groupTitle": "_home_pi_weather_station_app_static_docs_api_v1_main_js",
+    "name": ""
+  }
+] });
